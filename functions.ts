@@ -26,3 +26,14 @@ console.log(combineValues(8, 8));
 addAndHandle(10, 20, (result) => {
   console.log(result);
 });
+
+function studentName(name: string , cb:(name:string ,mark:number,fullMark:number) =>void) {
+  const mark =90
+  const fullMark = 100
+  cb(name, mark, fullMark)
+}
+
+studentName('Subhaprakash',(name,mark,fullmark)=>{
+  const percentage = mark/fullmark * 100;
+  console.log(name,'got the percentage in Exam is-' , percentage)
+})
